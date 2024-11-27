@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const resultDiv = document.getElementById('result');
 
     async function fetchParticipants() {
-        const response = await fetch('http://localhost:3000/participants');
+        const response = await fetch('http://192.168.1.121:3000/participants');
         const data = await response.json();
         return data;
     }
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         if (name) {
             try {
-                const response = await fetch('http://localhost:3000/pair', {
+                const response = await fetch('http://192.168.1.121:3000/pair', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     document.getElementById('reset-button').addEventListener('click', async function() {
         try {
-            const response = await fetch('http://localhost:3000/reset', {
+            const response = await fetch('http://192.168.1.121:3000/reset', {
                 method: 'POST'
             });
 
