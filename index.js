@@ -46,17 +46,15 @@ document.getElementById('santa-form').addEventListener('submit', function(event)
 
             // Update lists and localStorage
             givers = givers.filter(g => g !== name);
-            receivers = receivers.filter(r => r !== recipient);
             participantsWhoPressed.push(name);
 
             localStorage.setItem('givers', JSON.stringify(givers));
-            localStorage.setItem('receivers', JSON.stringify(receivers));
             localStorage.setItem('participantsWhoPressed', JSON.stringify(participantsWhoPressed));
 
-            // Remove names from display
+            // Remove the giver's name from the participants display
             const participantsElements = Array.from(participantsDiv.children);
             participantsElements.forEach(elem => {
-                if (elem.textContent === recipient || elem.textContent === name) {
+                if (elem.textContent === name) {
                     participantsDiv.removeChild(elem);
                 }
             });
