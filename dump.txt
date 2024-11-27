@@ -1,0 +1,2 @@
+let givers = ["Cami", "Mati", "Anto", "Doc", "Leo", "Marghe", "Nunzio", "Silvia", "Angelica", "Virgi", "Marco", "Su", "Vera", "Dario", "Eleonora", "Dom", "Fra Calandro"];
+let receivers = [...givers];
